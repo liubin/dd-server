@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"github.com/spf13/cast"
 	"net/http"
-	"strings"
 )
 
 func IntakeHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,12 +28,23 @@ func IntakeHandler(w http.ResponseWriter, r *http.Request) {
 	for _, metric := range req.Metrics {
 		if m, e := decodeMetric(metric); e != nil {
 		} else {
-			b, _ := json.Marshal(m)
-			fmt.Println(string(b))
+			//b, _ := json.Marshal(m)
+			//fmt.Println(string(b))
 			metrics = append(metrics, m)
 		}
 	}
 
+	//processes := ParseProcesses(&req.Processes)
+	//fmt.Println(processes)
+
+	//events := ParseEvents(&req)
+	//fmt.Println(events)
+
+	//agentCheck := ParseAgentChecks(&req)
+	//fmt.Println(agentCheck)
+
+	serviceCheck, _ := ParseServiceChecks(&req)
+	fmt.Println(serviceCheck)
 }
 
 func decodeMetric(v interface{}) (*Metric, error) {
@@ -74,25 +84,13 @@ func parseMapTag(sa map[string]interface{}) map[string]string {
 			tags[k] = sv
 			continue
 		}
-		va, ok := v.([]interface{})
+		va, ok := v.([]string)
 		if !ok {
 			continue
 		}
 
-		m := parseStringTag(va)
+		m := ParseStringTag(va)
 		tags = MergeMap(tags, m)
-	}
-	return tags
-}
-
-func parseStringTag(sa []interface{}) map[string]string {
-	tags := make(map[string]string, 0)
-	for _, s := range sa {
-		so, _ := s.(string)
-		ss := strings.Split(so, ":")
-		if len(ss) == 2 {
-			tags[ss[0]] = ss[1]
-		}
 	}
 	return tags
 }

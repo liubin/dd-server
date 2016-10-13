@@ -10,6 +10,14 @@
 			"notests": true
 		},
 		{
+			"importpath": "github.com/mitchellh/mapstructure",
+			"repository": "https://github.com/mitchellh/mapstructure",
+			"vcs": "git",
+			"revision": "a6ef2f080c66d0a2e94e97cf74f80f772855da63",
+			"branch": "master",
+			"notests": true
+		},
+		{
 			"importpath": "github.com/spf13/cast",
 			"repository": "https://github.com/spf13/cast",
 			"vcs": "git",

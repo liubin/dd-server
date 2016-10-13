@@ -6,6 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"strings"
 )
 
 type Record struct {
@@ -50,4 +51,15 @@ func readAll(r io.Reader) ([]byte, error) {
 	} else {
 		return body, nil
 	}
+}
+
+func ParseStringTag(sa []string) map[string]string {
+	tags := make(map[string]string, 0)
+	for _, s := range sa {
+		ss := strings.Split(s, ":")
+		if len(ss) == 2 {
+			tags[ss[0]] = ss[1]
+		}
+	}
+	return tags
 }
