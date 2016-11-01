@@ -1,2 +1,976 @@
-{"apiKey": "248c59333070d5fd2f4c3", "cpuSystem": 0.34, "memShared": 4, "ioStats": {"dm-1": {"wrqm/s": "0.00", "avgrq-sz": "0.00", "r_await": "0.00", "rkB/s": "0.00", "await": "0.00", "w/s": "0.00", "avgqu-sz": "0.00", "svctm": "0.00", "wkB/s": "0.00", "rrqm/s": "0.00", "r/s": "0.00", "%util": "0.00", "w_await": "0.00"}, "dm-2": {"wrqm/s": "0.00", "avgrq-sz": "0.00", "r_await": "0.00", "rkB/s": "0.00", "await": "0.00", "w/s": "0.00", "avgqu-sz": "0.00", "svctm": "0.00", "wkB/s": "0.00", "rrqm/s": "0.00", "r/s": "0.00", "%util": "0.00", "w_await": "0.00"}, "dm-3": {"wrqm/s": "0.00", "avgrq-sz": "0.00", "r_await": "0.00", "rkB/s": "0.00", "await": "0.00", "w/s": "0.00", "avgqu-sz": "0.00", "svctm": "0.00", "wkB/s": "0.00", "rrqm/s": "0.00", "r/s": "0.00", "%util": "0.00", "w_await": "0.00"}, "dm-0": {"wrqm/s": "0.00", "avgrq-sz": "0.00", "r_await": "0.00", "rkB/s": "0.00", "await": "0.00", "w/s": "0.00", "avgqu-sz": "0.00", "svctm": "0.00", "wkB/s": "0.00", "rrqm/s": "0.00", "r/s": "0.00", "%util": "0.00", "w_await": "0.00"}, "sda": {"wrqm/s": "0.00", "avgrq-sz": "0.00", "r_await": "0.00", "rkB/s": "0.00", "await": "0.00", "w/s": "0.00", "avgqu-sz": "0.00", "svctm": "0.00", "wkB/s": "0.00", "rrqm/s": "0.00", "r/s": "0.00", "%util": "0.00", "w_await": "0.00"}}, "memPhysUsable": 228, "meta": {"socket-hostname": "bogon", "timezones": ["UTC", "UTC"], "hostname": "bogon", "socket-fqdn": "bogon"}, "agentVersion": "5.8.5", "memPageTables": 5, "memSwapUsed": 0, "memSwapPctFree": 1.0, "memPhysFree": 7, "memPhysPctUsable": 0.4662576687116564, "uuid": "d6c0788714155a208474aeb3c0876bb8", "memPhysTotal": 489, "cpuUser": 0.67, "memSlab": 63, "cpuGuest": 0.0, "memPhysUsed": 482, "system.load.norm.1": 0.04, "system.load.norm.5": 0.1, "events": {"System": [{"timestamp": 1476195870.719676, "host": "bogon", "api_key": "8ea42d1939e248c59333070d5fd2f4c3", "msg_text": "Version 5.8.5", "event_type": "Agent Startup"}], "docker_daemon": [{"event_object": "docker:datadog/docker-dd-agent:latest", "host": "bogon", "msg_text": "%%%\ndatadog/docker-dd-agent:latest 1 start, 1 kill, 1 stop, 1 restart, 1 die on bogon\n```\nRESTART \tdd-agent\nSTART \tdd-agent\nSTOP \tdd-agent\nDIE \tdd-agent\nKILL \tdd-agent\n```\n%%%", "event_type": "docker", "tags": ["container_name:dd-agent", "image_name:datadog/docker-dd-agent", "docker_image:datadog/docker-dd-agent:latest", "image_tag:latest"], "source_type_name": "docker", "timestamp": 1476195856, "api_key": "8ea42d1939e248c59333070d5fd2f4c3", "msg_title": "datadog/docker-dd-agent:latest 1 start, 1 kill, 1 stop, 1 restart, 1 die on bogon"}]}, "resources": {"processes": {"format_description": [[2, "user", "str", "append", "append", "append", "append", false, false], [2, "pct_cpu", "float", "sum", "avg", "sum", "avg", false, false], [2, "pct_mem", "float", "sum", "avg", "sum", "avg", false, false], [2, "vsz", "int", "sum", "avg", "sum", "avg", false, false], [2, "rss", "int", "sum", "avg", "sum", "avg", false, false], [2, "family", "str", null, null, "append", "append", true, true], [2, "ps_count", "int", "sum", "avg", "sum", "avg", false, false]], "snaps": [[1476195863, [["root", 0, 14.36079715643596, 490717184, 73641984, "python", 3], ["root", 0, 2.730140980071089, 92172288, 14000128, "supervisord", 1], ["root", 0, 0.7500299532728942, 116981760, 3846144, "gohai", 1]]]], "format_version": 1}, "meta": {"host": "bogon", "api_key": "8ea42d1939e248c59333070d5fd2f4c3"}}, "system.load.5": 0.1, "agent_checks": [["ntp", "ntp", 0, "OK", "", {}], ["disk", "disk", 0, "OK", "", {}], ["docker_daemon", "docker_daemon", 0, "OK", "", {}]], "system.uptime": 18308.66, "python": "2.7.12 (default, Jul 27 2016, 15:55:48) \n[GCC 4.7.2]", "collection_timestamp": 1476195858.886153, "processes": {"processes": [["root", "1", "3.2", "2.7", "90012", "13660", "?", "Ss", "14:24", "0:00", "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/bin/supervisord -n -c /etc/dd-agent/supervisor.conf"], ["root", "10", "6.6", "4.6", "204896", "23520", "?", "Sl", "14:24", "0:00", "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/dogstatsd.py --use-local-forwarder"], ["root", "11", "5.0", "5.6", "205952", "28496", "?", "Sl", "14:24", "0:00", "/opt/datadog-agent/bin/go-metro -cfg=/etc/dd-agent/conf.d/go-metro.yaml"], ["root", "12", "6.0", "4.8", "140600", "24264", "?", "S", "14:24", "0:00", "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/ddagent.py"], ["root", "13", "7.0", "4.8", "133720", "24072", "?", "S", "14:24", "0:00", "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/agent.py foreground --use-local-forwarder"], ["root", "14", "5.0", "4.3", "118704", "21664", "?", "S", "14:24", "0:00", "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/jmxfetch.py"], ["root", "38", "0.0", "0.2", "17512", "1140", "?", "R", "14:24", "0:00", "ps auxww"]], "apiKey": "8ea42d1939e248c59333070d5fd2f4c3", "host": "bogon"}, "system.load.15": 0.08, "metrics": [["system.disk.total", 1476195870, 10474496.0, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.fs.inodes.in_use", 1476195870, 1.5975206479543748e-05, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.fs.inodes.free", 1476195870, 62596, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.fs.inodes.free", 1476195870, 10464333, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.fs.inodes.total", 1476195870, 10484736, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.fs.inodes.in_use", 1476195870, 0.0019459717440668033, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.disk.total", 1476195870, 38765936.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.fs.inodes.total", 1476195870, 62597, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.disk.in_use", 1476195870, 0.23188814249683823, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.fs.inodes.in_use", 1476195870, 0.0019459717440668033, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.disk.used", 1476195870, 0.0, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.disk.used", 1476195870, 436668.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.disk.total", 1476195870, 250388.0, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.fs.inodes.total", 1476195870, 10484736, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.fs.inodes.used", 1476195870, 1, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.fs.inodes.total", 1476195870, 62597, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.disk.total", 1476195870, 10474496.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.disk.used", 1476195870, 0.0, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.fs.inodes.in_use", 1476195870, 0.0002715785101522437, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.fs.inodes.used", 1476195870, 20403, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.disk.free", 1476195870, 65536.0, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.disk.used", 1476195870, 8527372.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.disk.in_use", 1476195870, 0.0416886884104018, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.disk.free", 1476195870, 10037828.0, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.fs.inodes.used", 1476195870, 100288, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.fs.inodes.free", 1476195870, 62580, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.disk.in_use", 1476195870, 0.0416886884104018, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.disk.in_use", 1476195870, 0.0, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.disk.used", 1476195870, 436668.0, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.fs.inodes.used", 1476195870, 17, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.fs.inodes.free", 1476195870, 2373696, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.disk.free", 1476195870, 28246272.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.disk.in_use", 1476195870, 0.0, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.fs.inodes.total", 1476195870, 2473984, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.disk.free", 1476195870, 10037828.0, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["system.fs.inodes.in_use", 1476195870, 0.040537044701986755, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/VolGroup00-LogVol00"}], ["system.disk.free", 1476195870, 250388.0, {"hostname": "bogon", "type": "gauge", "device_name": "tmpfs"}], ["system.disk.total", 1476195870, 65536.0, {"hostname": "bogon", "type": "gauge", "device_name": "shm"}], ["system.fs.inodes.free", 1476195870, 10464333, {"hostname": "bogon", "type": "gauge", "device_name": "rootfs"}], ["system.fs.inodes.used", 1476195870, 20403, {"hostname": "bogon", "type": "gauge", "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"}], ["docker.containers.stopped", 1476195870, 2, {"hostname": "bogon", "type": "gauge", "tags": ["docker_image:sha256:608fe53940deaa50f3bb74d712cbf3580bf71466d23417995faa41f5837ef843", "image_name:sha256", "image_tag:608fe53940deaa50f3bb74d712cbf3580bf71466d23417995faa41f5837ef843"]}], ["docker.mem.swap", 1476195870, 0, {"hostname": "bogon", "type": "gauge", "tags": ["container_name:dd-agent", "docker_image:datadog/docker-dd-agent:latest", "image_name:datadog/docker-dd-agent", "image_tag:latest"]}], ["docker.containers.stopped", 1476195870, 1, {"hostname": "bogon", "type": "gauge", "tags": ["docker_image:tiny", "image_name:tiny"]}], ["docker.mem.cache", 1476195870, 49152, {"hostname": "bogon", "type": "gauge", "tags": ["container_name:dd-agent", "docker_image:datadog/docker-dd-agent:latest", "image_name:datadog/docker-dd-agent", "image_tag:latest"]}], ["docker.containers.running", 1476195870, 1, {"hostname": "bogon", "type": "gauge", "tags": ["docker_image:datadog/docker-dd-agent:latest", "image_name:datadog/docker-dd-agent", "image_tag:latest"]}], ["docker.mem.rss", 1476195870, 70750208, {"hostname": "bogon", "type": "gauge", "tags": ["container_name:dd-agent", "docker_image:datadog/docker-dd-agent:latest", "image_name:datadog/docker-dd-agent", "image_tag:latest"]}], ["docker.containers.stopped", 1476195870, 0, {"hostname": "bogon", "type": "gauge", "tags": ["docker_image:datadog/docker-dd-agent:latest", "image_name:datadog/docker-dd-agent", "image_tag:latest"]}]], "service_checks": [{"status": 3, "tags": null, "timestamp": 1476195870.704261, "check": "ntp.in_sync", "host_name": "bogon", "message": null, "id": 1}, {"status": 0, "tags": ["check:ntp"], "timestamp": 1476195870.704442, "check": "datadog.agent.check_status", "host_name": "bogon", "message": null, "id": 2}, {"status": 0, "tags": ["check:disk"], "timestamp": 1476195870.708296, "check": "datadog.agent.check_status", "host_name": "bogon", "message": null, "id": 3}, {"status": 0, "tags": null, "timestamp": 1476195870.711197, "check": "docker.service_up", "host_name": "bogon", "message": null, "id": 4}, {"status": 0, "tags": ["check:docker_daemon"], "timestamp": 1476195870.719553, "check": "datadog.agent.check_status", "host_name": "bogon", "message": null, "id": 5}, {"status": 0, "tags": null, "timestamp": 1476195870.719665, "check": "datadog.agent.up", "host_name": "bogon", "message": null, "id": 6}], "memSwapFree": 1535, "system.load.norm.15": 0.08, "memCached": 176, "system.load.1": 0.04, "cpuWait": 0.0, "external_host_tags": {}, "host-tags": {}, "internalHostname": "bogon", "memSwapTotal": 1535, "cpuIdle": 98.99, "memBuffers": 22, "cpuStolen": 0.0, "memSwapCached": 0, "systemStats": {"nixV": ["debian", "8.6", ""], "cpuCores": 1, "machine": "x86_64", "platform": "linux2", "pythonV": "2.7.12", "processor": ""}, "os": "linux", "gohai": "{\"cpu\":{\"cache_size\":\"3072 KB\",\"cpu_cores\":\"1\",\"cpu_logical_processors\":\"1\",\"family\":\"6\",\"mhz\":\"2699.998\",\"model\":\"61\",\"model_name\":\"Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz\",\"stepping\":\"4\",\"vendor_id\":\"GenuineIntel\"},\"filesystem\":[{\"kb_size\":\"250388\",\"mounted_on\":\"/dev\",\"name\":\"tmpfs\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/sys/fs/cgroup\",\"name\":\"tmpfs\"},{\"kb_size\":\"38765936\",\"mounted_on\":\"/conf.d\",\"name\":\"/dev/mapper/VolGroup00-LogVol00\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/run/docker.sock\",\"name\":\"tmpfs\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/host/sys/fs/cgroup\",\"name\":\"tmpfs\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/dev/shm\",\"name\":\"shm\"}],\"gohai\":{\"build_date\":\"Wed Jul 27 16:03:54 UTC 2016\",\"git_branch\":\"last-stable\",\"git_hash\":\"e899dd3\",\"go_version\":\"go version go1.3.3 linux/amd64\"},\"memory\":{\"swap_total\":\"1572860kB\",\"total\":\"500780kB\"},\"network\":{\"ipaddress\":\"172.17.0.2\",\"ipaddressv6\":\"fe80::42:acff:fe11:2\",\"macaddress\":\"02:42:ac:11:00:02\"},\"platform\":{\"GOOARCH\":\"amd64\",\"GOOS\":\"linux\",\"goV\":\"1.3.3\",\"hardware_platform\":\"unknown\",\"hostname\":\"bogon\",\"kernel_name\":\"Linux\",\"kernel_release\":\"3.10.0-327.22.2.el7.x86_64\",\"kernel_version\":\"#1 SMP Thu Jun 23 17:05:11 UTC 2016\",\"machine\":\"x86_64\",\"os\":\"GNU/Linux\",\"processor\":\"unknown\",\"pythonV\":\"2.7.12\"}}"}
-
+{
+  "apiKey": "248c59333070d5fd2f4c3",
+  "cpuSystem": 0.34,
+  "memShared": 4,
+  "ioStats": {
+    "dm-1": {
+      "wrqm/s": "0.00",
+      "avgrq-sz": "0.00",
+      "r_await": "0.00",
+      "rkB/s": "0.00",
+      "await": "0.00",
+      "w/s": "0.00",
+      "avgqu-sz": "0.00",
+      "svctm": "0.00",
+      "wkB/s": "0.00",
+      "rrqm/s": "0.00",
+      "r/s": "0.00",
+      "%util": "0.00",
+      "w_await": "0.00"
+    },
+    "dm-2": {
+      "wrqm/s": "0.00",
+      "avgrq-sz": "0.00",
+      "r_await": "0.00",
+      "rkB/s": "0.00",
+      "await": "0.00",
+      "w/s": "0.00",
+      "avgqu-sz": "0.00",
+      "svctm": "0.00",
+      "wkB/s": "0.00",
+      "rrqm/s": "0.00",
+      "r/s": "0.00",
+      "%util": "0.00",
+      "w_await": "0.00"
+    },
+    "dm-3": {
+      "wrqm/s": "0.00",
+      "avgrq-sz": "0.00",
+      "r_await": "0.00",
+      "rkB/s": "0.00",
+      "await": "0.00",
+      "w/s": "0.00",
+      "avgqu-sz": "0.00",
+      "svctm": "0.00",
+      "wkB/s": "0.00",
+      "rrqm/s": "0.00",
+      "r/s": "0.00",
+      "%util": "0.00",
+      "w_await": "0.00"
+    },
+    "dm-0": {
+      "wrqm/s": "0.00",
+      "avgrq-sz": "0.00",
+      "r_await": "0.00",
+      "rkB/s": "0.00",
+      "await": "0.00",
+      "w/s": "0.00",
+      "avgqu-sz": "0.00",
+      "svctm": "0.00",
+      "wkB/s": "0.00",
+      "rrqm/s": "0.00",
+      "r/s": "0.00",
+      "%util": "0.00",
+      "w_await": "0.00"
+    },
+    "sda": {
+      "wrqm/s": "0.00",
+      "avgrq-sz": "0.00",
+      "r_await": "0.00",
+      "rkB/s": "0.00",
+      "await": "0.00",
+      "w/s": "0.00",
+      "avgqu-sz": "0.00",
+      "svctm": "0.00",
+      "wkB/s": "0.00",
+      "rrqm/s": "0.00",
+      "r/s": "0.00",
+      "%util": "0.00",
+      "w_await": "0.00"
+    }
+  },
+  "memPhysUsable": 228,
+  "meta": {
+    "socket-hostname": "bogon",
+    "timezones": [
+      "UTC",
+      "UTC"
+    ],
+    "hostname": "bogon",
+    "socket-fqdn": "bogon"
+  },
+  "agentVersion": "5.8.5",
+  "memPageTables": 5,
+  "memSwapUsed": 0,
+  "memSwapPctFree": 1,
+  "memPhysFree": 7,
+  "memPhysPctUsable": 0.4662576687116564,
+  "uuid": "d6c0788714155a208474aeb3c0876bb8",
+  "memPhysTotal": 489,
+  "cpuUser": 0.67,
+  "memSlab": 63,
+  "cpuGuest": 0,
+  "memPhysUsed": 482,
+  "system.load.norm.1": 0.04,
+  "system.load.norm.5": 0.1,
+  "events": {
+    "System": [
+      {
+        "timestamp": 1476195870.719676,
+        "host": "bogon",
+        "api_key": "8ea42d1939e248c59333070d5fd2f4c3",
+        "msg_text": "Version 5.8.5",
+        "event_type": "Agent Startup"
+      }
+    ],
+    "docker_daemon": [
+      {
+        "event_object": "docker:datadog/docker-dd-agent:latest",
+        "host": "bogon",
+        "msg_text": "%%%\ndatadog/docker-dd-agent:latest 1 start, 1 kill, 1 stop, 1 restart, 1 die on bogon\n```\nRESTART \tdd-agent\nSTART \tdd-agent\nSTOP \tdd-agent\nDIE \tdd-agent\nKILL \tdd-agent\n```\n%%%",
+        "event_type": "docker",
+        "tags": [
+          "container_name:dd-agent",
+          "image_name:datadog/docker-dd-agent",
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_tag:latest"
+        ],
+        "source_type_name": "docker",
+        "timestamp": 1476195856,
+        "api_key": "8ea42d1939e248c59333070d5fd2f4c3",
+        "msg_title": "datadog/docker-dd-agent:latest 1 start, 1 kill, 1 stop, 1 restart, 1 die on bogon"
+      }
+    ]
+  },
+  "resources": {
+    "processes": {
+      "format_description": [
+        [
+          2,
+          "user",
+          "str",
+          "append",
+          "append",
+          "append",
+          "append",
+          false,
+          false
+        ],
+        [
+          2,
+          "pct_cpu",
+          "float",
+          "sum",
+          "avg",
+          "sum",
+          "avg",
+          false,
+          false
+        ],
+        [
+          2,
+          "pct_mem",
+          "float",
+          "sum",
+          "avg",
+          "sum",
+          "avg",
+          false,
+          false
+        ],
+        [
+          2,
+          "vsz",
+          "int",
+          "sum",
+          "avg",
+          "sum",
+          "avg",
+          false,
+          false
+        ],
+        [
+          2,
+          "rss",
+          "int",
+          "sum",
+          "avg",
+          "sum",
+          "avg",
+          false,
+          false
+        ],
+        [
+          2,
+          "family",
+          "str",
+          null,
+          null,
+          "append",
+          "append",
+          true,
+          true
+        ],
+        [
+          2,
+          "ps_count",
+          "int",
+          "sum",
+          "avg",
+          "sum",
+          "avg",
+          false,
+          false
+        ]
+      ],
+      "snaps": [
+        [
+          1476195863,
+          [
+            [
+              "root",
+              0,
+              14.36079715643596,
+              490717184,
+              73641984,
+              "python",
+              3
+            ],
+            [
+              "root",
+              0,
+              2.730140980071089,
+              92172288,
+              14000128,
+              "supervisord",
+              1
+            ],
+            [
+              "root",
+              0,
+              0.7500299532728942,
+              116981760,
+              3846144,
+              "gohai",
+              1
+            ]
+          ]
+        ]
+      ],
+      "format_version": 1
+    },
+    "meta": {
+      "host": "bogon",
+      "api_key": "8ea42d1939e248c59333070d5fd2f4c3"
+    }
+  },
+  "system.load.5": 0.1,
+  "agent_checks": [
+    [
+      "ntp",
+      "ntp",
+      0,
+      "OK",
+      "",
+      {}
+    ],
+    [
+      "disk",
+      "disk",
+      0,
+      "OK",
+      "",
+      {}
+    ],
+    [
+      "docker_daemon",
+      "docker_daemon",
+      0,
+      "OK",
+      "",
+      {}
+    ]
+  ],
+  "system.uptime": 18308.66,
+  "python": "2.7.12 (default, Jul 27 2016, 15:55:48) \n[GCC 4.7.2]",
+  "collection_timestamp": 1476195858.886153,
+  "processes": {
+    "processes": [
+      [
+        "root",
+        "1",
+        "3.2",
+        "2.7",
+        "90012",
+        "13660",
+        "?",
+        "Ss",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/bin/supervisord -n -c /etc/dd-agent/supervisor.conf"
+      ],
+      [
+        "root",
+        "10",
+        "6.6",
+        "4.6",
+        "204896",
+        "23520",
+        "?",
+        "Sl",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/dogstatsd.py --use-local-forwarder"
+      ],
+      [
+        "root",
+        "11",
+        "5.0",
+        "5.6",
+        "205952",
+        "28496",
+        "?",
+        "Sl",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/bin/go-metro -cfg=/etc/dd-agent/conf.d/go-metro.yaml"
+      ],
+      [
+        "root",
+        "12",
+        "6.0",
+        "4.8",
+        "140600",
+        "24264",
+        "?",
+        "S",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/ddagent.py"
+      ],
+      [
+        "root",
+        "13",
+        "7.0",
+        "4.8",
+        "133720",
+        "24072",
+        "?",
+        "S",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/agent.py foreground --use-local-forwarder"
+      ],
+      [
+        "root",
+        "14",
+        "5.0",
+        "4.3",
+        "118704",
+        "21664",
+        "?",
+        "S",
+        "14:24",
+        "0:00",
+        "/opt/datadog-agent/embedded/bin/python /opt/datadog-agent/agent/jmxfetch.py"
+      ],
+      [
+        "root",
+        "38",
+        "0.0",
+        "0.2",
+        "17512",
+        "1140",
+        "?",
+        "R",
+        "14:24",
+        "0:00",
+        "ps auxww"
+      ]
+    ],
+    "apiKey": "8ea42d1939e248c59333070d5fd2f4c3",
+    "host": "bogon"
+  },
+  "system.load.15": 0.08,
+  "metrics": [
+    [
+      "system.disk.total",
+      1476195870,
+      10474496,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.fs.inodes.in_use",
+      1476195870,
+      1.5975206479543748e-05,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.fs.inodes.free",
+      1476195870,
+      62596,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.fs.inodes.free",
+      1476195870,
+      10464333,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.fs.inodes.total",
+      1476195870,
+      10484736,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.fs.inodes.in_use",
+      1476195870,
+      0.0019459717440668033,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.disk.total",
+      1476195870,
+      38765936,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.fs.inodes.total",
+      1476195870,
+      62597,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.disk.in_use",
+      1476195870,
+      0.23188814249683823,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.fs.inodes.in_use",
+      1476195870,
+      0.0019459717440668033,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.disk.used",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.disk.used",
+      1476195870,
+      436668,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.disk.total",
+      1476195870,
+      250388,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.fs.inodes.total",
+      1476195870,
+      10484736,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.fs.inodes.used",
+      1476195870,
+      1,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.fs.inodes.total",
+      1476195870,
+      62597,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.disk.total",
+      1476195870,
+      10474496,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.disk.used",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.fs.inodes.in_use",
+      1476195870,
+      0.0002715785101522437,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.fs.inodes.used",
+      1476195870,
+      20403,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.disk.free",
+      1476195870,
+      65536,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.disk.used",
+      1476195870,
+      8527372,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.disk.in_use",
+      1476195870,
+      0.0416886884104018,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.disk.free",
+      1476195870,
+      10037828,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.fs.inodes.used",
+      1476195870,
+      100288,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.fs.inodes.free",
+      1476195870,
+      62580,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.disk.in_use",
+      1476195870,
+      0.0416886884104018,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.disk.in_use",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.disk.used",
+      1476195870,
+      436668,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.fs.inodes.used",
+      1476195870,
+      17,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.fs.inodes.free",
+      1476195870,
+      2373696,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.disk.free",
+      1476195870,
+      28246272,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.disk.in_use",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.fs.inodes.total",
+      1476195870,
+      2473984,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.disk.free",
+      1476195870,
+      10037828,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "system.fs.inodes.in_use",
+      1476195870,
+      0.040537044701986755,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/VolGroup00-LogVol00"
+      }
+    ],
+    [
+      "system.disk.free",
+      1476195870,
+      250388,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "tmpfs"
+      }
+    ],
+    [
+      "system.disk.total",
+      1476195870,
+      65536,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "shm"
+      }
+    ],
+    [
+      "system.fs.inodes.free",
+      1476195870,
+      10464333,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "rootfs"
+      }
+    ],
+    [
+      "system.fs.inodes.used",
+      1476195870,
+      20403,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "device_name": "/dev/mapper/docker-253:0-2098864-5e3994b75ce0e8f40a60dde3c2413ea0e30fe62bda1fc3263b6a4c90bd14f8d4"
+      }
+    ],
+    [
+      "docker.containers.stopped",
+      1476195870,
+      2,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "docker_image:sha256:608fe53940deaa50f3bb74d712cbf3580bf71466d23417995faa41f5837ef843",
+          "image_name:sha256",
+          "image_tag:608fe53940deaa50f3bb74d712cbf3580bf71466d23417995faa41f5837ef843"
+        ]
+      }
+    ],
+    [
+      "docker.mem.swap",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "container_name:dd-agent",
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_name:datadog/docker-dd-agent",
+          "image_tag:latest"
+        ]
+      }
+    ],
+    [
+      "docker.containers.stopped",
+      1476195870,
+      1,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "docker_image:tiny",
+          "image_name:tiny"
+        ]
+      }
+    ],
+    [
+      "docker.mem.cache",
+      1476195870,
+      49152,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "container_name:dd-agent",
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_name:datadog/docker-dd-agent",
+          "image_tag:latest"
+        ]
+      }
+    ],
+    [
+      "docker.containers.running",
+      1476195870,
+      1,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_name:datadog/docker-dd-agent",
+          "image_tag:latest"
+        ]
+      }
+    ],
+    [
+      "docker.mem.rss",
+      1476195870,
+      70750208,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "container_name:dd-agent",
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_name:datadog/docker-dd-agent",
+          "image_tag:latest"
+        ]
+      }
+    ],
+    [
+      "docker.containers.stopped",
+      1476195870,
+      0,
+      {
+        "hostname": "bogon",
+        "type": "gauge",
+        "tags": [
+          "docker_image:datadog/docker-dd-agent:latest",
+          "image_name:datadog/docker-dd-agent",
+          "image_tag:latest"
+        ]
+      }
+    ]
+  ],
+  "service_checks": [
+    {
+      "status": 3,
+      "tags": null,
+      "timestamp": 1476195870.704261,
+      "check": "ntp.in_sync",
+      "host_name": "bogon",
+      "message": null,
+      "id": 1
+    },
+    {
+      "status": 0,
+      "tags": [
+        "check:ntp"
+      ],
+      "timestamp": 1476195870.704442,
+      "check": "datadog.agent.check_status",
+      "host_name": "bogon",
+      "message": null,
+      "id": 2
+    },
+    {
+      "status": 0,
+      "tags": [
+        "check:disk"
+      ],
+      "timestamp": 1476195870.708296,
+      "check": "datadog.agent.check_status",
+      "host_name": "bogon",
+      "message": null,
+      "id": 3
+    },
+    {
+      "status": 0,
+      "tags": null,
+      "timestamp": 1476195870.711197,
+      "check": "docker.service_up",
+      "host_name": "bogon",
+      "message": null,
+      "id": 4
+    },
+    {
+      "status": 0,
+      "tags": [
+        "check:docker_daemon"
+      ],
+      "timestamp": 1476195870.719553,
+      "check": "datadog.agent.check_status",
+      "host_name": "bogon",
+      "message": null,
+      "id": 5
+    },
+    {
+      "status": 0,
+      "tags": null,
+      "timestamp": 1476195870.719665,
+      "check": "datadog.agent.up",
+      "host_name": "bogon",
+      "message": null,
+      "id": 6
+    }
+  ],
+  "memSwapFree": 1535,
+  "system.load.norm.15": 0.08,
+  "memCached": 176,
+  "system.load.1": 0.04,
+  "cpuWait": 0,
+  "external_host_tags": {},
+  "host-tags": {},
+  "internalHostname": "bogon",
+  "memSwapTotal": 1535,
+  "cpuIdle": 98.99,
+  "memBuffers": 22,
+  "cpuStolen": 0,
+  "memSwapCached": 0,
+  "systemStats": {
+    "nixV": [
+      "debian",
+      "8.6",
+      ""
+    ],
+    "cpuCores": 1,
+    "machine": "x86_64",
+    "platform": "linux2",
+    "pythonV": "2.7.12",
+    "processor": ""
+  },
+  "os": "linux",
+  "gohai": "{\"cpu\":{\"cache_size\":\"3072 KB\",\"cpu_cores\":\"1\",\"cpu_logical_processors\":\"1\",\"family\":\"6\",\"mhz\":\"2699.998\",\"model\":\"61\",\"model_name\":\"Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz\",\"stepping\":\"4\",\"vendor_id\":\"GenuineIntel\"},\"filesystem\":[{\"kb_size\":\"250388\",\"mounted_on\":\"/dev\",\"name\":\"tmpfs\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/sys/fs/cgroup\",\"name\":\"tmpfs\"},{\"kb_size\":\"38765936\",\"mounted_on\":\"/conf.d\",\"name\":\"/dev/mapper/VolGroup00-LogVol00\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/run/docker.sock\",\"name\":\"tmpfs\"},{\"kb_size\":\"250388\",\"mounted_on\":\"/host/sys/fs/cgroup\",\"name\":\"tmpfs\"},{\"kb_size\":\"65536\",\"mounted_on\":\"/dev/shm\",\"name\":\"shm\"}],\"gohai\":{\"build_date\":\"Wed Jul 27 16:03:54 UTC 2016\",\"git_branch\":\"last-stable\",\"git_hash\":\"e899dd3\",\"go_version\":\"go version go1.3.3 linux/amd64\"},\"memory\":{\"swap_total\":\"1572860kB\",\"total\":\"500780kB\"},\"network\":{\"ipaddress\":\"172.17.0.2\",\"ipaddressv6\":\"fe80::42:acff:fe11:2\",\"macaddress\":\"02:42:ac:11:00:02\"},\"platform\":{\"GOOARCH\":\"amd64\",\"GOOS\":\"linux\",\"goV\":\"1.3.3\",\"hardware_platform\":\"unknown\",\"hostname\":\"bogon\",\"kernel_name\":\"Linux\",\"kernel_release\":\"3.10.0-327.22.2.el7.x86_64\",\"kernel_version\":\"#1 SMP Thu Jun 23 17:05:11 UTC 2016\",\"machine\":\"x86_64\",\"os\":\"GNU/Linux\",\"processor\":\"unknown\",\"pythonV\":\"2.7.12\"}}"
+}
