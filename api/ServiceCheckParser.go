@@ -1,6 +1,7 @@
 package api
 
 import (
+	"dd-server/types"
 	"github.com/mitchellh/mapstructure"
 )
 
@@ -15,17 +16,17 @@ import (
 //"message": null,
 //"id": 1
 //},
-func ParseServiceChecks(req *RequestBody) ([]ServiceCheckOutput, error) {
+func ParseServiceChecks(req *types.RequestBody) ([]types.ServiceCheckOutput, error) {
 
-	var inputs []ServiceCheckInput
+	var inputs []types.ServiceCheckInput
 	if err := mapstructure.Decode(req.ServiceChecks, &inputs); err != nil {
 		return nil, err
 	}
 
-	outputs := make([]ServiceCheckOutput, 0)
+	outputs := make([]types.ServiceCheckOutput, 0)
 
 	for _, input := range inputs {
-		output := ServiceCheckOutput{
+		output := types.ServiceCheckOutput{
 			ServiceCheckBasic: input.ServiceCheckBasic,
 			Tags:              ParseStringTag(input.Tags)}
 		outputs = append(outputs, output)

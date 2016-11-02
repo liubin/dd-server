@@ -1,6 +1,7 @@
 package api
 
 import (
+	"dd-server/types"
 	"fmt"
 )
 
@@ -16,15 +17,15 @@ import (
 //}
 //],
 //}
-func ParseEvents(req *RequestBody) []Event {
+func ParseEvents(req *types.RequestBody) []types.Event {
 
-	events := make([]Event, 0)
+	events := make([]types.Event, 0)
 
 	for k, v := range req.Events {
 		fmt.Println("Key: ", k)
 		for _, vv := range v {
 			if vvv, ok := vv.(map[string]interface{}); ok {
-				e := Event{
+				e := types.Event{
 					Name:  k,
 					Props: vvv,
 				}

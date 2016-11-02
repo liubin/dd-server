@@ -1,6 +1,7 @@
 package api
 
 import (
+	"dd-server/types"
 	"github.com/spf13/cast"
 )
 
@@ -15,16 +16,16 @@ import (
 //root        33  0.0  0.1  20228   848 ?        Ss   08:37   0:00 bash
 //root       380  0.0  0.2  17492  1136 ?        R+   08:56   0:00 ps -aux
 
-func ParseProcesses(ps *ProcessStruct) []Process {
+func ParseProcesses(ps *types.ProcessStruct) []types.Process {
 
-	processes := make([]Process, 0)
+	processes := make([]types.Process, 0)
 
 	for _, process := range ps.Processes {
 		if pa, ok := process.([]interface{}); ok {
 			if len(pa) != 11 {
 				continue
 			}
-			p := Process{
+			p := types.Process{
 				User:    cast.ToString(pa[0]),
 				Process: cast.ToString(pa[10]),
 			}
