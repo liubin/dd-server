@@ -23,6 +23,10 @@ var flags = []cli.Flag{
 		Usage: "specific output log file, otherwise output to stdout by default",
 	},
 	cli.StringFlag{
+		Name:  "license-validator",
+		Usage: "extensional API to validate license",
+	},
+	cli.StringFlag{
 		Name:  "sink-driver",
 		Usage: "Sink driver to save the metrics",
 	},
@@ -93,6 +97,10 @@ func cmdStartDaemon(c *cli.Context) error {
 			}
 		}
 	}
+
+	licenseValidator := c.String("license-validator")
+	log.Printf("license-validator is %s\n", licenseValidator)
+	api.SetLicenseValidator(licenseValidator)
 
 	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/api/v1/series/", api.SeriesHandler)

@@ -8,7 +8,8 @@ Receive metrics from dd-agent ( datadog agent ), and save other store ( like Ope
 
 ```
 ./dd-server server --port 8800 --sink-driver opentsdb  \
-    --sink-opts endpoint=http://192.168.33.10:4242
+    --sink-opts endpoint=http://192.168.33.10:4242 \
+    --license-validator http://localhost:8081
 ```
 
 ## Kafka
@@ -19,7 +20,8 @@ Receive metrics from dd-agent ( datadog agent ), and save other store ( like Ope
     --sink-opts topic=metrics \
     -sink-opts acks=local \
     -sink-opts compression=none \
-    -sink-opts flush-frequency=500
+    -sink-opts flush-frequency=500 \
+    --license-validator http://localhost:8081
 ```
 
 options:

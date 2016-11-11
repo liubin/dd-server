@@ -80,7 +80,7 @@
 			"importpath": "github.com/liubin/goutils",
 			"repository": "https://github.com/liubin/goutils",
 			"vcs": "git",
-			"revision": "24f3e7fcc36113aa95d232c11339f756b4e7987c",
+			"revision": "ad427cf1d6a0c3c6fc6ef68270cd5c43f812d485",
 			"branch": "master",
 			"notests": true
 		},

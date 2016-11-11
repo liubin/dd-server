@@ -6,7 +6,9 @@ import (
 	"dd-server/types"
 	"encoding/json"
 	"fmt"
+	"github.com/liubin/goutils"
 	"github.com/spf13/cast"
+	"log"
 	"net/http"
 )
 
@@ -26,12 +28,20 @@ func IntakeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	licenseTags, err := validateLicense(req.ApiKey)
+	if err != nil {
+		fmt.Printf("licnese validate error %s", err.Error())
+		return
+	}
+	log.Printf("licenseTags : %v", licenseTags)
+
 	metrics := make([]*types.Metric, 0)
 	for _, metric := range req.Metrics {
 		if m, e := decodeMetric(metric); e != nil {
 		} else {
 			//b, _ := json.Marshal(m)
 			//fmt.Println(string(b))
+			m.Tags = goutils.MergeStringMap(m.Tags, licenseTags)
 			metrics = append(metrics, m)
 		}
 	}
