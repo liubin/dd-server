@@ -5,9 +5,13 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"sync"
 )
 
 var licenseValidatorUrl string
+
+var cache = map[string](map[string]string){}
+var mutex = new(sync.Mutex)
 
 func SetLicenseValidator(url string) {
 	// TODO: check url.
@@ -23,10 +27,24 @@ func validateLicense(license string) (map[string]string, error) {
 		return nil, nil
 	}
 
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	if v, ok := cache[license]; ok {
+		log.Println("Got from cache!!!!!!!!!!!!!!!", v)
+
+		return v, nil
+	}
+	log.Println("Got from Server!!!!!!!!!!!!!!!")
+
 	data := map[string]string{"license": license}
 
 	if resp, statusCode, err := utils.POST(licenseValidatorUrl, "", data, nil); statusCode == http.StatusOK {
-		return parseLicenseResult(resp)
+		v, e := parseLicenseResult(resp)
+		if e == nil && v != nil {
+			cache[license] = v
+		}
+		return v, e
 	} else {
 		log.Printf("validate license error: %s", err.Error())
 		log.Printf("validate license error, resp: %s", resp)
