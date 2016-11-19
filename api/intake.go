@@ -47,21 +47,25 @@ func IntakeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	metrics = addOtherMetrics(req, metrics)
-
-	mSink := sink.GetSinkDriver()
-	mSink.Write(&types.MetricPayload{Metrics: metrics})
+	//
+	//mSink := sink.GetSinkDriver()
+	//mSink.Write(&types.MetricPayload{Metrics: metrics})
 
 	//processes := ParseProcesses(&req.Processes)
 	//fmt.Println(processes)
 
-	//events := ParseEvents(&req)
-	//fmt.Println(events)
-
+	elasticSearchSink := sink.GetElasticSearchSink()
+	if elasticSearchSink != nil {
+		events := ParseEvents(&req)
+		if len(events) > 0 {
+			elasticSearchSink.WriteEvents(events)
+		}
+	}
 	//agentCheck := ParseAgentChecks(&req)
 	//fmt.Println(agentCheck)
 
-	serviceCheck, _ := ParseServiceChecks(&req)
-	fmt.Println(serviceCheck)
+	//serviceCheck, _ := ParseServiceChecks(&req)
+	//fmt.Println(serviceCheck)
 }
 
 func addOtherMetrics(req types.RequestBody, metrics []*types.Metric) []*types.Metric {

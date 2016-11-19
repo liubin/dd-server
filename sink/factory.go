@@ -10,6 +10,7 @@ type SinkDriver interface {
 }
 
 var sinkDriver SinkDriver
+var elasticSearchSink *ElasticSearchSink
 
 func InitSinkDriver(opts map[string]string) error {
 	driver, ok := opts["sink-driver"]
@@ -29,6 +30,16 @@ func InitSinkDriver(opts map[string]string) error {
 	}
 
 	return err
+}
+
+func InitElasticSearchSink(opts map[string]string) error {
+	var err error
+	elasticSearchSink, err = NewElasticSearchSink(opts)
+	return err
+}
+
+func GetElasticSearchSink() *ElasticSearchSink {
+	return elasticSearchSink
 }
 
 func GetSinkDriver() SinkDriver {

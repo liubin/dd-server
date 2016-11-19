@@ -71,7 +71,13 @@ func doHttpRequest(method, host, path string, data interface{}, headers map[stri
 }
 
 func EncodeData(v interface{}) (*bytes.Buffer, error) {
+
 	param := bytes.NewBuffer(nil)
+	if vv, ok := v.(string); ok {
+		_, e := param.WriteString(vv)
+		return param, e
+	}
+
 	j, err := json.Marshal(v)
 	if err != nil {
 		return nil, err

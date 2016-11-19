@@ -35,6 +35,11 @@ var flags = []cli.Flag{
 		Value: &cli.StringSlice{},
 		Usage: "options for the sink driver",
 	},
+	cli.StringSliceFlag{
+		Name:  "elasticsearch",
+		Value: &cli.StringSlice{},
+		Usage: "options for the elasticsearch",
+	},
 }
 
 // Default handler, do nothing.
@@ -95,6 +100,17 @@ func cmdStartDaemon(c *cli.Context) error {
 			if e := sink.InitSinkDriver(optsMap); e != nil {
 				return e
 			}
+		}
+	}
+
+	elasticsearchOpts := c.StringSlice("elasticsearch")
+	log.Printf("elasticsearch sink opts is %s\n", elasticsearchOpts)
+	if optsMap, err := goutils.SliceToMap(elasticsearchOpts); err != nil {
+		return fmt.Errorf("elasticsearch sink opts invalid: %s", elasticsearchOpts)
+	} else {
+		if e := sink.InitElasticSearchSink(optsMap); e != nil {
+			log.Println("elasticsearch init error", e)
+			return e
 		}
 	}
 

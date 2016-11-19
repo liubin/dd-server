@@ -31,8 +31,15 @@ type ProcessStruct struct {
 }
 
 type Event struct {
-	Name  string                 `json:"name"`
-	Props map[string]interface{} `json:"props"`
+	Component      string   `json:"component,omitempty"`
+	EventObject    string   `json:"event_object,omitempty"`
+	Host           string   `json:"host,omitempty"`
+	MsgText        string   `json:"msg_text,omitempty"`
+	EventType      string   `json:"event_type,omitempty"`
+	SourceTypeName string   `json:"source_type_name,omitempty"`
+	MsgTitle       string   `json:"msg_title,omitempty"`
+	Timestamp      float64  `json:"timestamp"`
+	Tags           []string `json:"tags,omitempty"`
 }
 
 type ServiceCheckBasic struct {

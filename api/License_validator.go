@@ -31,11 +31,9 @@ func validateLicense(license string) (map[string]string, error) {
 	defer mutex.Unlock()
 
 	if v, ok := cache[license]; ok {
-		log.Println("Got from cache!!!!!!!!!!!!!!!", v)
-
 		return v, nil
 	}
-	log.Println("Got from Server!!!!!!!!!!!!!!!")
+	log.Println("Get license from Server", license)
 
 	data := map[string]string{"license": license}
 
@@ -46,7 +44,9 @@ func validateLicense(license string) (map[string]string, error) {
 		}
 		return v, e
 	} else {
-		log.Printf("validate license error: %s", err.Error())
+		if err != nil {
+			log.Printf("validate license error: %s", err.Error())
+		}
 		log.Printf("validate license error, resp: %s", resp)
 		return nil, err
 	}

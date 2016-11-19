@@ -1,0 +1,32 @@
+{
+  "mappings": {
+    "events": {
+      "properties": {
+        "event_object": {
+          "type": "text"
+        },
+        "host": {
+          "type": "text"
+        },
+        "msg_text": {
+          "type": "text"
+        },
+        "event_type": {
+          "type": "text"
+        },
+        "tags": {
+          "type": "text"
+        },
+        "source_type_name": {
+          "type": "text"
+        },
+        "msg_title": {
+          "type": "text"
+        },
+        "timestamp": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
