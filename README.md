@@ -18,17 +18,17 @@ Receive metrics from dd-agent ( datadog agent ), and save other store ( like Ope
 ./dd-server server --port 8800 \
     --sink-driver kafka -sink-opts brokers=192.168.33.10:9092 \
     --sink-opts topic=metrics \
-    -sink-opts acks=local \
-    -sink-opts compression=none \
-    -sink-opts flush-frequency=500 \
+    --sink-opts acks=local \
+    --sink-opts compression=none \
+    --sink-opts flush-frequency=500 \
     --license-validator http://localhost:8081/api/v1/users
 ```
 
 options:
 
-- acks: default none
-- compression: default none
-- flush-frequency: default 500ms
+- `acks`: default none
+- `compression`: default none
+- `flush-frequency`: default 500ms
 
 ## Save events to elasticsearch
 
@@ -56,6 +56,8 @@ Items:
 
 
 ## Implement your license validator.
+
+License validator is used to do token authentication, and use the result as tags.
 
 The validator should:
 
